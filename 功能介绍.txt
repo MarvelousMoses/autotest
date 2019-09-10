@@ -1,0 +1,49 @@
+特点：
+1.部署在web方便管理及编写用例
+2.可以命名元素，便于写用例
+3.可以关联jira提bug
+4.可以关联tesklink获取用例
+4.可以关联Jenkins定时执行用例，发邮件
+
+mysql配置：
+	教程：
+		https://blog.csdn.net/Charonmomo/article/details/98440968
+	办公室mysql初始密码：
+		root@localhost: 
+			:tXE;Hjf2Ymt(初始)
+			hemutest@2018(新密码)
+
+django配置：
+	超管:
+		uname:admin
+		email:825306937@qq.com
+		pwd:hemutest@2018
+	用户：
+		uname:zhanghaoran
+		pwd:123123enter
+
+
+django常用命令（pycharm terminal）：
+	1. Django服务启动：
+		默认端口是 8000 python manage.py runserver
+		改动端口,可以用 python manage runserver 127.0.0.1:80
+		               python manage runserver 0.0.0.0:80
+    2.服务关闭：		   CTRL+BREAK
+常用mysql命令(powershell or cmd):
+	1.启动MySQL服务	net start mysql
+	2.停止服务	    net stop mysql
+	3.卸载服务		sc delete MySQL/mysqld -remove
+
+常见报错：
+	Django连接mysql报错：https://blog.csdn.net/u013794093/article/details/93632470
+
+
+当前进度：
+	3.5.2 图与实际不一致 解决办法：
+		1.autotest/product/admin.py
+			admin.site.register(Product) ——————> admin.site.register(Product, ProductAdmin)
+		2.py manage.py makemigrations product
+		3.py manage.py migrate product
+	3.5.3  'bootstrap4' is not a registered tag library. Must be one of:
+		pip install django-bootstrap4
+	3.6.2 步骤5 class Apistep的最后一句return self.apiname
